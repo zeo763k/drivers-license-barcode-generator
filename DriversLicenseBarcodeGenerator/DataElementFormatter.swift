@@ -20,4 +20,12 @@ class DataElementFormatter {
     static func format(postalCode: String) -> String {
         return postalCode.padding(toLength: 9, withPad: "0", startingAt: 0)
     }
+    
+    static func format(eyeColor: DataElementEyeColor) -> String {
+        return DataElementFormatter.format(string: eyeColor.rawValue, length: 3)
+    }
+    
+    static func format(height: Int) -> String {
+        return DataElementFormatter.format(string: "\(height) IN", length: 6)
+    }
 }
