@@ -1,7 +1,7 @@
 import Foundation
 
 enum DataElementEyeColor: String {
-    case Black = "BKL"
+    case Black = "BLK"
     case Blue = "BLU"
     case Brown = "BRO"
     case Dichromaic = "DIC"

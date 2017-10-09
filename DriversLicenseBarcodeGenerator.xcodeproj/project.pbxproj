@@ -154,6 +154,7 @@
 		FC30F73A1F86D4E4002C5657 /* DDG.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DDG.swift; sourceTree = "<group>"; };
 		FC30F73D1F86D56A002C5657 /* DCGTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCGTests.swift; sourceTree = "<group>"; };
 		FC36B3071F88FD4E00F15B49 /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
+		FC4DBB5A1F8BE64A00172D97 /* DocumentIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = DocumentIcon.icns; sourceTree = "<group>"; };
 		FC5333F51F8679E200D546F1 /* DriversLicenseBarcodeGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DriversLicenseBarcodeGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC5333F81F8679E200D546F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC5333FA1F8679E200D546F1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -278,6 +279,7 @@
 			children = (
 				FC5333F81F8679E200D546F1 /* AppDelegate.swift */,
 				FC5333FA1F8679E200D546F1 /* ViewController.swift */,
+				FC4DBB5A1F8BE64A00172D97 /* DocumentIcon.icns */,
 				FC5333FC1F8679E200D546F1 /* Document.swift */,
 				FC5333FE1F8679E200D546F1 /* Assets.xcassets */,
 				FC5334001F8679E200D546F1 /* Main.storyboard */,

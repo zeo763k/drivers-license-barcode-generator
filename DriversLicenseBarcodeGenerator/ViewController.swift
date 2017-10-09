@@ -72,7 +72,9 @@ class ViewController: NSViewController {
     }
     
     private var physicalDescriptionEyeColor: DataElementEyeColor {
-        return .Hazel // TODO: Get this from the picker
+        let selectedItem = eyeColor.selectedItem!
+        
+        return DataElementEyeColor(rawValue: selectedItem.title)!
     }
     
     private var physicalDescriptionHeight: Int {
@@ -88,7 +90,7 @@ class ViewController: NSViewController {
     }
 
     private var addressJurisdictionCode: String {
-        return "OH" // TODO: How do you get the value of a popup?
+        return statePopupButton.selectedItem!.title // TODO: Map this to an enum
     }
 
     private var addressPostalCode: String {
@@ -177,19 +179,19 @@ class ViewController: NSViewController {
     }
     
     fileprivate func configurePhysicalDescriptionSexInput() {
-        let options = ["Male", "Female", "Not Specified"]
+        let options = ["1", "2", "3"] // TODO: male, female, not specified
         
         sexPopupButton.addItems(withTitles: options)
     }
     
     fileprivate func configurePhysicalDescriptionHairColorInput() {
-        let options = ["Black", "Blue", "Brown", "Dichromatic", "Gray", "Green", "Hazel", "Maroon", "Pink", "Unknown"]
+       let options = ["BLK", "BLU", "BRO", "DIC", "GRY", "GRN", "HAZ", "MAR", "PNK", "UNK"]
         
         eyeColor.addItems(withTitles: options)
     }
     
     fileprivate func configureCountryIdentificationInput() {
-        let countryIdentificationCodes = ["USA", "CAN"]
+        let countryIdentificationCodes = ["USA", "CAN"] // TODO: Get from enum
         countryIdentificationPopup.addItems(withTitles: countryIdentificationCodes)
     }
 
