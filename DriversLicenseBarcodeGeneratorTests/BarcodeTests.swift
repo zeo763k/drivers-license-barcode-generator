@@ -13,27 +13,7 @@ class BarcodeTests: XCTestCase {
     let dateOfBirth = DBB(buildDate(year: 1986, month: 9, day: 14))
     let physicalDescriptionSex = DBC(.Male)
     let physicalDescriptionEyeColor = DAY(.Hazel)
-    
-    func testComplianceIndicator() {
-        XCTAssertEqual(Barcode.complianceIndicator, "\u{40}");
-    }
-    
-    func testDataElementSeparator() {
-        XCTAssertEqual(Barcode.dataElementSeparator, "\u{0A}");
-    }
-    
-    func testRecordSeparator() {
-        XCTAssertEqual(Barcode.recordSeparator, "\u{1E}")
-    }
-    
-    func testSegmentSeparator() {
-        XCTAssertEqual(Barcode.segmentSeparator, "\u{0D}")
-    }
-    
-    func testFileType() {
-        XCTAssertEqual(Barcode.fileType, "ANSI ")
-    }
-    
+   
     func testDescription() {
 //        DCS("DECOT"),
 //        customerFirstName,

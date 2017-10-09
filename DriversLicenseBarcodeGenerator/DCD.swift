@@ -2,6 +2,6 @@ import Foundation
 
 class DCD: DataElement<String>, DataElementFormatable {
     func format() -> String {
-        return "DCD\(DataElementFormatter.formatString(data, length: 5))"
+        return "DCD\(DataElementFormatter.format(string: data, length: 5))"
     }
 }

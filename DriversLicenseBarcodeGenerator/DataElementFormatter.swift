@@ -9,15 +9,15 @@ class DataElementFormatter {
         return formatter
     }
     
-    static func formatString(_ string: String, length: Int) -> String {
+    static func format(string: String, length: Int) -> String {
         return String(string.prefix(length))
     }
     
-    static func formatDate(date: Date) -> String {
+    static func format(date: Date) -> String {
         return dateFormatter.string(from: date)
     }
     
-    static func formatPostalCode(postalCode: String) -> String {
+    static func format(postalCode: String) -> String {
         return postalCode.padding(toLength: 9, withPad: "0", startingAt: 0)
     }
 }

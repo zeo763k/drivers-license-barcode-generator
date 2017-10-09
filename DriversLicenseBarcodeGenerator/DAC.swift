@@ -2,6 +2,6 @@ import Foundation
 
 class DAC: DataElement<String>, DataElementFormatable {
     func format() -> String {
-        return "DAC\(DataElementFormatter.formatString(data, length: 6))"
+        return "DAC\(DataElementFormatter.format(string: data, length: 40))"
     }
 }

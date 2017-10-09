@@ -2,6 +2,6 @@ import Foundation
 
 class DAD: DataElement<[String]>, DataElementFormatable {
     func format() -> String {
-        return "DAD\(DataElementFormatter.formatString(data.joined(separator: ","), length: 40))"
+        return "DAD\(DataElementFormatter.format(string: data.joined(separator: ","), length: 40))"
     }
 }

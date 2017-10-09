@@ -2,6 +2,6 @@ import Foundation
 
 class DAK: DataElement<String>, DataElementFormatable {
     func format() -> String {
-        return "DAK\(DataElementFormatter.formatString(data, length: 11))"
+        return "DAK\(DataElementFormatter.format(postalCode: data))"
     }
 }

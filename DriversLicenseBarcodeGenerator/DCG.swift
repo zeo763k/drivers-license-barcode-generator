@@ -2,6 +2,6 @@ import Foundation
 
 class DCG: DataElement<DataElementCountryIdentificationCode>, DataElementFormatable {    
     func format() -> String {
-        return "DCG\(DataElementFormatter.formatString(data.rawValue, length: 6))"
+        return "DCG\(DataElementFormatter.format(string: data.rawValue, length: 6))"
     }
 }

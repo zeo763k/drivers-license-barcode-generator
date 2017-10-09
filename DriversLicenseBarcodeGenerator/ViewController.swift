@@ -24,6 +24,10 @@ class ViewController: NSViewController {
     @IBOutlet var jurisdictionSpecificEndorsementCodesTextField: NSTextField!
     @IBOutlet var jurisdictionSpecificRestrictionCodesTextField: NSTextField!
     @IBOutlet var physicalDescriptionHeightTextField: NSTextField!
+    
+    let issuerIdentificationNumber = "636000" // TODO: Make dynamic
+    let AAMVAVersionNumber = "09" // TODO: Make dynamic
+    let jurisdictionVersionNumber = "00" // TODO: Make dynamic
 
     private var jurisdictionSpecificEndorsementCodes: String {
         return jurisdictionSpecificEndorsementCodesTextField.stringValue
@@ -127,12 +131,21 @@ class ViewController: NSViewController {
             DDG(.No), // TODO: This should be calculated inside of barcode
         ]
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        imageView.wantsLayer = true
+        imageView.layer?.backgroundColor = NSColor.gray.cgColor
+    }
 
     // MARK: - Actions
     
     @IBAction func generate(sender: Any) {
-        let barcode = Barcode(dataElements: dataElements, issuerIdentificationNumber: "636000", AAMVAVersionNumber: "00", jurisdictionVersionNumber: "00")
+        let barcode = Barcode(dataElements: dataElements, issuerIdentificationNumber: issuerIdentificationNumber, AAMVAVersionNumber: AAMVAVersionNumber, jurisdictionVersionNumber: jurisdictionVersionNumber)
 
+        print(barcode)
+        
         if let image = generatePDF417Barcode(from: barcode) {
             imageView.image = image
 

@@ -1,11 +1,3 @@
-//
-//  Document.swift
-//  DriversLicenseBarcodeGenerator
-//
-//  Created by Kyle Decot on 10/5/17.
-//  Copyright © 2017 Kyle Decot. All rights reserved.
-//
-
 import Cocoa
 
 class Document: NSDocument {
@@ -22,7 +14,7 @@ class Document: NSDocument {
     override func makeWindowControllers() {
         // Returns the Storyboard that contains your Document window.
         let storyboard = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: nil)
-        let windowController = storyboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "Document Window Controller")) as! NSWindowController
+        let windowController = storyboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier(rawValue: "Document Window Controller")) as! WindowController
         self.addWindowController(windowController)
     }
 

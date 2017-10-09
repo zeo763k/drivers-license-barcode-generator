@@ -1,21 +1,11 @@
 import Foundation
 
-enum SubfileType: String {
-    case DL = "DL"
-    case ID = "ID"
-}
-
 class Barcode {
-    static let complianceIndicator = "\u{40}"
-    static let dataElementSeparator = "\u{0A}"
-    static let recordSeparator = "\u{1E}"
-    static let segmentSeparator = "\u{0D}"
-    static let fileType = "ANSI "
-    
     let dataElements: [Any]
     let issuerIdentificationNumber: String
     let AAMVAVersionNumber: String
     let jurisdictionVersionNumber: String
+    let dataElementSeparator = "\u{0A}"
 
     var data: Data {
         return description.data(using: String.Encoding.ascii)!
@@ -33,9 +23,11 @@ extension Barcode: CustomStringConvertible {
     var description: String {
         let header = Header(issuerIdentificationNumber: issuerIdentificationNumber, AAMVAVersionNumber: AAMVAVersionNumber, jurisdictionVersionNumber: jurisdictionVersionNumber, numberOfEntries: "\(dataElements.count)").description
         let formattedDataElemented = dataElements.map { ($0 as! DataElementFormatable).format() }
-        let joined = formattedDataElemented.joined(separator: Barcode.dataElementSeparator)
+        let joined = formattedDataElemented.joined(separator: dataElementSeparator)
 
-        return "\(header)\(joined)"
+        let subfileDesignator = "DL00410278"
+        
+        return "\(header)\(subfileDesignator)\(joined)"
     }
 }
 
