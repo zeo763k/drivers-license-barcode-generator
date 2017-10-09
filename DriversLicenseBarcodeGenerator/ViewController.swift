@@ -177,8 +177,8 @@ class ViewController: NSViewController {
         jurisdictionSpecificVehicleClassTextField.stringValue = "D"
         
         dateOfBirthDatePicker.dateValue = Date(year: 1986, month: 9, day: 14)
-        dateOfBirthDatePicker.dateValue = Date(year: 2015, month: 9, day: 14)
-        dateOfBirthDatePicker.dateValue = Date(year: 2019, month: 9, day: 14)
+        issueDatePicker.dateValue = Date(year: 2015, month: 9, day: 14)
+        expirationDatePicker.dateValue = Date(year: 2019, month: 9, day: 14)
         
         physicalDescriptionHeightTextField.stringValue = "70"
         

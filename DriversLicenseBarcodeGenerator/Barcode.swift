@@ -39,7 +39,7 @@ extension Barcode: CustomStringConvertible {
         let formattedDataElemented = dataElements.map { ($0 as! DataElementFormatable).format() }
         let joined = formattedDataElemented.joined(separator: dataElementSeparator)
 
-        let subfileDesignator = "DL00410278"
+        let subfileDesignator = "DL00300099"
         
         return "\(header)\(subfileDesignator)\(joined)"
     }
