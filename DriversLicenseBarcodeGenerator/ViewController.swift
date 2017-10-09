@@ -20,6 +20,8 @@ class ViewController: NSViewController {
     @IBOutlet var eyeColor: NSPopUpButton!
     @IBOutlet var customerIDNumberTextField: NSTextField!
     
+    @IBOutlet var countryIdentificationPopup: NSPopUpButton!
+    
     @IBOutlet var jurisdictionSpecificVehicleClassTextField: NSTextField!
     @IBOutlet var jurisdictionSpecificEndorsementCodesTextField: NSTextField!
     @IBOutlet var jurisdictionSpecificRestrictionCodesTextField: NSTextField!
@@ -102,7 +104,9 @@ class ViewController: NSViewController {
     }
 
     private var countryIdentification: DataElementCountryIdentificationCode {
-        return .US // TODO
+        let selectedItem = countryIdentificationPopup.selectedItem!
+        
+        return DataElementCountryIdentificationCode(rawValue: selectedItem.title)!
     }
     
     var dataElements:[Any] {
@@ -136,7 +140,57 @@ class ViewController: NSViewController {
         super.viewDidLoad()
         
         imageView.wantsLayer = true
-        imageView.layer?.backgroundColor = NSColor.gray.cgColor
+        imageView.layer?.backgroundColor = NSColor.lightGray.cgColor
+        imageView.layer?.cornerRadius = 5
+        
+        configureJurisdicationCodeInput()
+        configureCountryIdentificationInput()
+        configurePhysicalDescriptionSexInput()
+        configurePhysicalDescriptionHairColorInput()
+        
+
+        
+        setDefaultValues()
+    }
+    
+    fileprivate func setDefaultValues() {
+//        firstNameTextField.stringValue = "Kyle"
+//        middleNameTextField.stringValue = "Brandon"
+//        lastNameTextField.stringValue = "Decot"
+        jurisdictionSpecificVehicleClassTextField.stringValue = "D"
+        
+        dateOfBirthDatePicker.dateValue = Date(year: 1986, month: 9, day: 14)
+        dateOfBirthDatePicker.dateValue = Date(year: 2015, month: 9, day: 14)
+        dateOfBirthDatePicker.dateValue = Date(year: 2019, month: 9, day: 14)
+        
+        physicalDescriptionHeightTextField.stringValue = "70"
+        
+        jurisdictionSpecificRestrictionCodesTextField.stringValue = "NONE"
+        jurisdictionSpecificEndorsementCodesTextField.stringValue = "NONE"
+    }
+    
+    fileprivate func configureJurisdicationCodeInput() {
+        
+        let jurisdictionCodes = ["AK", "AL", "AR", "AS", "AZ", "CA", "CO", "CT", "DC", "DE", "FL", "GA", "GU", "HI", "IA", "ID", "IL", "IN", "KS", "KY", "LA", "MA", "MD", "ME", "MI", "MN", "MO", "MS", "MT", "NC", "ND", "NE", "NH", "NJ", "NM", "NV", "NY", "OH", "OK", "OR", "PA", "PR", "RI", "SC", "SD", "TN", "TX", "UT", "VA", "VI", "VT", "WA", "WI", "WV", "WY"]
+        
+        statePopupButton.addItems(withTitles: jurisdictionCodes)
+    }
+    
+    fileprivate func configurePhysicalDescriptionSexInput() {
+        let options = ["Male", "Female", "Not Specified"]
+        
+        sexPopupButton.addItems(withTitles: options)
+    }
+    
+    fileprivate func configurePhysicalDescriptionHairColorInput() {
+        let options = ["Black", "Blue", "Brown", "Dichromatic", "Gray", "Green", "Hazel", "Maroon", "Pink", "Unknown"]
+        
+        eyeColor.addItems(withTitles: options)
+    }
+    
+    fileprivate func configureCountryIdentificationInput() {
+        let countryIdentificationCodes = ["USA", "CAN"]
+        countryIdentificationPopup.addItems(withTitles: countryIdentificationCodes)
     }
 
     // MARK: - Actions
