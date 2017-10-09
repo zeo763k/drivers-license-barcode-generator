@@ -26,7 +26,8 @@ class ViewController: NSViewController {
     @IBOutlet var jurisdictionSpecificEndorsementCodesTextField: NSTextField!
     @IBOutlet var jurisdictionSpecificRestrictionCodesTextField: NSTextField!
     @IBOutlet var physicalDescriptionHeightTextField: NSTextField!
-    
+    @IBOutlet var documentDiscriminatorTextField: NSTextField!
+        
     let issuerIdentificationNumber = "636000" // TODO: Make dynamic
     let AAMVAVersionNumber = "09" // TODO: Make dynamic
     let jurisdictionVersionNumber = "00" // TODO: Make dynamic
@@ -102,7 +103,7 @@ class ViewController: NSViewController {
     }
     
     private var documentDiscriminator: String {
-        return "1234567890123456789012345" // TODO: Create some kind of generator for this and populate a field in the UI w/ it initially
+        return documentDiscriminatorTextField.stringValue
     }
 
     private var countryIdentification: DataElementCountryIdentificationCode {
@@ -149,9 +150,7 @@ class ViewController: NSViewController {
         configureCountryIdentificationInput()
         configurePhysicalDescriptionSexInput()
         configurePhysicalDescriptionHairColorInput()
-        
 
-        
         setDefaultValues()
     }
     
@@ -169,6 +168,8 @@ class ViewController: NSViewController {
         
         jurisdictionSpecificRestrictionCodesTextField.stringValue = "NONE"
         jurisdictionSpecificEndorsementCodesTextField.stringValue = "NONE"
+        
+        documentDiscriminatorTextField.stringValue = "1234567890123456789012345"
     }
     
     fileprivate func configureJurisdicationCodeInput() {

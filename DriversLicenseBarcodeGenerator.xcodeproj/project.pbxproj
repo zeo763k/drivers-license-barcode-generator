@@ -83,6 +83,7 @@
 		FC53340D1F8679E200D546F1 /* BarcodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC53340C1F8679E200D546F1 /* BarcodeTests.swift */; };
 		FC5334181F867A4F00D546F1 /* Barcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5334171F867A4F00D546F1 /* Barcode.swift */; };
 		FC53341A1F867B3E00D546F1 /* Barcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5334171F867A4F00D546F1 /* Barcode.swift */; };
+		FC7C11A91F8BEFC3002EAF47 /* DCFTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7C11A81F8BEFC3002EAF47 /* DCFTests.swift */; };
 		FC92D1AC1F8BBD6C0097644D /* DAGTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC92D1AB1F8BBD6C0097644D /* DAGTests.swift */; };
 		FC92D1AE1F8BBE310097644D /* DAQTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC92D1AD1F8BBE310097644D /* DAQTests.swift */; };
 		FCB3248D1F87D40A006AF035 /* DataElementFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB3248C1F87D40A006AF035 /* DataElementFormatterTests.swift */; };
@@ -166,6 +167,7 @@
 		FC53340C1F8679E200D546F1 /* BarcodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeTests.swift; sourceTree = "<group>"; };
 		FC53340E1F8679E200D546F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC5334171F867A4F00D546F1 /* Barcode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Barcode.swift; sourceTree = "<group>"; };
+		FC7C11A81F8BEFC3002EAF47 /* DCFTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCFTests.swift; sourceTree = "<group>"; };
 		FC92D1AB1F8BBD6C0097644D /* DAGTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAGTests.swift; sourceTree = "<group>"; };
 		FC92D1AD1F8BBE310097644D /* DAQTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAQTests.swift; sourceTree = "<group>"; };
 		FCB3248C1F87D40A006AF035 /* DataElementFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataElementFormatterTests.swift; sourceTree = "<group>"; };
@@ -252,6 +254,7 @@
 				FC30F73D1F86D56A002C5657 /* DCGTests.swift */,
 				FC16BE291F87FA4300065602 /* DCSTests.swift */,
 				FCB324991F87E88F006AF035 /* DDETests.swift */,
+				FC7C11A81F8BEFC3002EAF47 /* DCFTests.swift */,
 			);
 			name = "Data Elements";
 			sourceTree = "<group>";
@@ -472,6 +475,7 @@
 				FC30F72D1F86D4C1002C5657 /* DAQ.swift in Sources */,
 				FC30F7091F86D458002C5657 /* DCS.swift in Sources */,
 				FC16BE3C1F8801CB00065602 /* DataElementEyeColor.swift in Sources */,
+				FC7C11A91F8BEFC3002EAF47 /* DCFTests.swift in Sources */,
 				FC16BE2A1F87FA4300065602 /* DCSTests.swift in Sources */,
 				FCB324911F87D525006AF035 /* DataElementCountryIdentificationCode.swift in Sources */,
 				FCB324901F87D4B1006AF035 /* DataElementLengthType.swift in Sources */,
