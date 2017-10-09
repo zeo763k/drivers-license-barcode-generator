@@ -33,5 +33,4 @@ class DataElementFormatterTests: XCTestCase {
 
         return calendar.date(from: dateComponents as DateComponents)!
     }
-
 }
