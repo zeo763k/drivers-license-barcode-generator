@@ -27,10 +27,26 @@ class ViewController: NSViewController {
     @IBOutlet var jurisdictionSpecificRestrictionCodesTextField: NSTextField!
     @IBOutlet var physicalDescriptionHeightTextField: NSTextField!
     @IBOutlet var documentDiscriminatorTextField: NSTextField!
-        
-    let issuerIdentificationNumber = "636000" // TODO: Make dynamic
-    let AAMVAVersionNumber = "09" // TODO: Make dynamic
-    let jurisdictionVersionNumber = "00" // TODO: Make dynamic
+    
+    @IBOutlet var issuerIdentificationNumberTextField: NSTextField!
+    @IBOutlet var AAMVAVersionNumberTextField: NSTextField!
+    @IBOutlet var jurisdictionVersionNumberTextField: NSTextField!
+    
+    private var issuerIdentificationNumber: String {
+        return issuerIdentificationNumberTextField.stringValue
+    }
+    
+    private var AAMVAVersionNumber: String {
+        return AAMVAVersionNumberTextField.stringValue
+    }
+    
+    private var jurisdictionVersionNumber: String {
+        return jurisdictionVersionNumberTextField.stringValue
+    }
+    
+    private var document: Document {
+        return view.window!.windowController!.document as! Document
+    }
 
     private var jurisdictionSpecificEndorsementCodes: String {
         return jurisdictionSpecificEndorsementCodesTextField.stringValue
@@ -170,10 +186,13 @@ class ViewController: NSViewController {
         jurisdictionSpecificEndorsementCodesTextField.stringValue = "NONE"
         
         documentDiscriminatorTextField.stringValue = "1234567890123456789012345"
+        
+        issuerIdentificationNumberTextField.stringValue = "636000"
+        AAMVAVersionNumberTextField.stringValue = "09"
+        jurisdictionVersionNumberTextField.stringValue = "00"
     }
     
     fileprivate func configureJurisdicationCodeInput() {
-        
         let jurisdictionCodes = ["AK", "AL", "AR", "AS", "AZ", "CA", "CO", "CT", "DC", "DE", "FL", "GA", "GU", "HI", "IA", "ID", "IL", "IN", "KS", "KY", "LA", "MA", "MD", "ME", "MI", "MN", "MO", "MS", "MT", "NC", "ND", "NE", "NH", "NJ", "NM", "NV", "NY", "OH", "OK", "OR", "PA", "PR", "RI", "SC", "SD", "TN", "TX", "UT", "VA", "VI", "VT", "WA", "WI", "WV", "WY"]
         
         statePopupButton.addItems(withTitles: jurisdictionCodes)
