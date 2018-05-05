@@ -131,27 +131,27 @@ class ViewController: NSViewController {
     var dataElements:[Any] {
         return [
             DAQ(customerIDNumber),
-            DCS(customerFamilyName),
-            DDE(.No),// TODO: This should be calculated inside of barcode
-            DAC(customerFirstName),
-            DDF(.No), // TODO: This should be calculated inside of barcode
-            DAD(customerMiddleNames),
-            DDG(.No), // TODO: This should be calculated inside of barcode
-            DCA(jurisdictionSpecificVehicleClass),
-            DCB(jurisdictionSpecificRestrictionCodes),
-            DCD(jurisdictionSpecificEndorsementCodes),
-            DBD(documentIssueDate),
-            DBB(dateOfBirth),
-            DBA(documentExpirationDate),
-            DBC(physicalDescriptionSex),
-            DAU(physicalDescriptionHeight),
-            DAY(physicalDescriptionEyeColor),
-            DAG(addressStreet1),
-            DAI(addressCity),
-            DAJ(addressJurisdictionCode),
-            DAK(addressPostalCode),
-            DCF(documentDiscriminator),
-            DCG(countryIdentification),
+            DCS(customerFamilyName),
+            DDE(.No),// TODO: This should be calculated inside of barcode
+            DAC(customerFirstName),
+            DDF(.No), // TODO: This should be calculated inside of barcode
+            DAD(customerMiddleNames),
+            DDG(.No), // TODO: This should be calculated inside of barcode
+            DCA(jurisdictionSpecificVehicleClass),
+            DCB(jurisdictionSpecificRestrictionCodes),
+            DCD(jurisdictionSpecificEndorsementCodes),
+            DBD(documentIssueDate),
+            DBB(dateOfBirth),
+            DBA(documentExpirationDate),
+            DBC(physicalDescriptionSex),
+            DAU(physicalDescriptionHeight),
+            DAY(physicalDescriptionEyeColor),
+            DAG(addressStreet1),
+            DAI(addressCity),
+            DAJ(addressJurisdictionCode),
+            DAK(addressPostalCode),
+            DCF(documentDiscriminator),
+            DCG(countryIdentification),
         ]
     }
     
